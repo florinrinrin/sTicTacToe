@@ -1,9 +1,14 @@
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
-    char[][] grid = {};
-    AppFunctionalities appFunctionalities = new AppFunctionalities();
-    appFunctionalities.initializeGrid(grid);
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.next();
 
+        char[][] grid = {};
+        AppFunctionalities appFunctionalities = new AppFunctionalities();
+        appFunctionalities.initializeGrid(grid);
+        appFunctionalities.userInputToPosition(userInput,grid);
     }
 }
