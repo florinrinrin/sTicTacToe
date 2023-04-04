@@ -10,5 +10,6 @@ public class App {
         AppFunctionalities appFunctionalities = new AppFunctionalities();
         appFunctionalities.initializeGrid(grid);
         appFunctionalities.userInputToPosition(userInput,grid);
+        AppFunctionalities.checkWinner(grid);
     }
 }

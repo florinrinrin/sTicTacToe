@@ -45,6 +45,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/User/IdeaProjects/sTicTacToe",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -71,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680012837195</updated>
       <workItem from="1680364710834" duration="24000" />
+      <workItem from="1680455200319" duration="271000" />
     </task>
     <servers />
   </component>
