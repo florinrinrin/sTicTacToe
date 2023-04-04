@@ -107,7 +107,7 @@ public class AppFunctionalities {
         List<Character> crossTwo = Arrays.asList(pos3, pos5, pos7);
 
 
-        List<List> winningConditions = new ArrayList<>();
+        List<List<Character>> winningConditions = new ArrayList<>();
         winningConditions.add(leftRow);
         winningConditions.add(middleRow);
         winningConditions.add(bottomRow);
@@ -131,10 +131,10 @@ public class AppFunctionalities {
             } else if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && !emptyPositions.containsAll(l)) {
                     System.out.println("Draw");
                     break;
-            } else if (oPositions.containsAll(l) && !xPositions.containsAll(l)) {
+            } else if (oPositions.containsAll(l)) {
                 System.out.println("O wins");
                 break;
-            } else if (xPositions.containsAll(l) && !oPositions.containsAll(l)) {
+            } else if (xPositions.containsAll(l)) {
                 System.out.println("X wins");
                 break;
             }
