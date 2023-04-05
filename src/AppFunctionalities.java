@@ -88,7 +88,7 @@ public class AppFunctionalities {
 
         System.out.println(posList);
 
-        List<Character> leftRow = Arrays.asList(pos1, pos2, pos3);
+        List<Character> topRow = Arrays.asList(pos1, pos2, pos3);
         List<Character> middleRow = Arrays.asList(pos4, pos5, pos6);
         List<Character> bottomRow = Arrays.asList(pos7, pos8, pos9);
         List<Character> leftColumn = Arrays.asList(pos1, pos4, pos7);
@@ -99,7 +99,7 @@ public class AppFunctionalities {
 
 
         List<List<Character>> winningConditions = new ArrayList<>();
-        winningConditions.add(leftRow);
+        winningConditions.add(topRow);
         winningConditions.add(middleRow);
         winningConditions.add(bottomRow);
         winningConditions.add(leftColumn);
@@ -112,24 +112,28 @@ public class AppFunctionalities {
         System.out.println("X positions: " + xPositions);
         System.out.println("Empty positions: " + emptyPositions);
 
-        for (List l : winningConditions) {
-            if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && emptyPositions.size() > 0) {
-                System.out.println("Game not finished");
-                break;
-            } else if (xPositions.containsAll(l) && oPositions.containsAll(l)) {
-                System.out.println("Impossible");
-                break;
-            } else if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && emptyPositions.size() == 0) {
-                    System.out.println("Draw");
-                    break;
-            } else if (oPositions.containsAll(l)) {
-                System.out.println("O wins");
-                break;
-            } else if (xPositions.containsAll(l)) {
-                System.out.println("X wins");
-                break;
-            }
+        boolean xWins = false;
+        boolean oWins = false;
 
+        for (List<Character> line : winningConditions) {
+            if (xPositions.containsAll(line)){
+                xWins = true;
+            }
+            if (oPositions.containsAll(line)) {
+                oWins = true;
+            }
+        }
+
+        if (xWins && oWins || xPositions.size() > oPositions.size() + 1 || oPositions.size() > xPositions.size() + 1) {
+            System.out.println("Impossible");
+        } else if (xWins) {
+            System.out.println("X wins");
+        } else if (oWins) {
+            System.out.println("O wins");
+        } else if (emptyPositions.size() == 0) {
+            System.out.println("Draw");
+        } else {
+            System.out.println("Game not finished");
         }
     }
 
