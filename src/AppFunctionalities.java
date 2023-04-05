@@ -8,20 +8,11 @@ public class AppFunctionalities {
     static ArrayList<Character> xPositions = new ArrayList<>();
     static ArrayList<Character> emptyPositions = new ArrayList<>();
     public static List<Character> posList = new ArrayList<>();
-    static Scanner scanner = new Scanner(System.in);
-    static String userInput = scanner.next();
 
-    public void initializeGrid(char[][] grid) {
-        System.out.println("---------");
-        grid = new char[][]{{'|', '_', '_', '_', '|'},
-                {'|', '_', '_', '_', '|'},
-                {'|', '_', '_', '_', '|'}};
 
-        printGrid(grid);
-    }
 
-    private static void printGrid(char[][] grid) {
-        grid = new char[3][5];
+    public static void printGrid(char[][] grid, String userInput) {
+
         grid[0][0] = '|';
         grid[0][1] = userInput.charAt(0);
         grid[0][2] = userInput.charAt(1);
@@ -39,7 +30,7 @@ public class AppFunctionalities {
         grid[2][2] = userInput.charAt(7);
         grid[2][3] = userInput.charAt(8);
         grid[2][4] = '|';
-
+        System.out.println("---------");
         for (char[] row : grid) {
             for (char c : row) {
                 System.out.print(c + " ");
@@ -52,8 +43,8 @@ public class AppFunctionalities {
 
 
 
-    public static void checkWinner(char[][] grid) {
-        grid = new char[3][5];
+    public static void checkWinner(char[][] grid, String userInput) {
+
         grid[0][0] = '|';
         grid[0][1] = userInput.charAt(0);
         grid[0][2] = userInput.charAt(1);
@@ -122,13 +113,13 @@ public class AppFunctionalities {
         System.out.println("Empty positions: " + emptyPositions);
 
         for (List l : winningConditions) {
-            if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && emptyPositions.containsAll(l)) {
+            if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && emptyPositions.size() > 0) {
                 System.out.println("Game not finished");
                 break;
             } else if (xPositions.containsAll(l) && oPositions.containsAll(l)) {
                 System.out.println("Impossible");
                 break;
-            } else if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && !emptyPositions.containsAll(l)) {
+            } else if (!xPositions.containsAll(l) && !oPositions.containsAll(l) && emptyPositions.size() == 0) {
                     System.out.println("Draw");
                     break;
             } else if (oPositions.containsAll(l)) {
