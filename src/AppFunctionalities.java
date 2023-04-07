@@ -138,83 +138,79 @@ public class AppFunctionalities {
     }
 
 
-        private static void addGridPositionsToList ( char pos1, char pos2, char pos3, char pos4, char pos5, char pos6,
-        char pos7, char pos8, char pos9){
-            if (pos1 == 'X') {
-                xPositions.add(pos1);
-            } else if (pos1 == 'O') {
-                oPositions.add(pos1);
-            } else if (pos1 == '_') {
-                emptyPositions.add(pos1);
-            }
-
-            if (pos2 == 'X') {
-                xPositions.add(pos2);
-            } else if (pos2 == 'O') {
-                oPositions.add(pos2);
-            } else if (pos2 == '_') {
-                emptyPositions.add(pos2);
-            }
-
-            if (pos3 == 'X') {
-                xPositions.add(pos3);
-            } else if (pos3 == 'O') {
-                oPositions.add(pos3);
-            } else if (pos3 == '_') {
-                emptyPositions.add(pos3);
-            }
-
-            if (pos4 == 'X') {
-                xPositions.add(pos4);
-            } else if (pos4 == 'O') {
-                oPositions.add(pos4);
-            } else if (pos4 == '_') {
-                emptyPositions.add(pos4);
-            }
-
-            if (pos5 == 'X') {
-                xPositions.add(pos5);
-            } else if (pos5 == 'O') {
-                oPositions.add(pos5);
-            } else if (pos5 == '_') {
-                emptyPositions.add(pos5);
-            }
-
-            if (pos6 == 'X') {
-                xPositions.add(pos6);
-            } else if (pos6 == 'O') {
-                oPositions.add(pos6);
-            } else if (pos6 == '_') {
-                emptyPositions.add(pos6);
-            }
-
-            if (pos7 == 'X') {
-                xPositions.add(pos7);
-            } else if (pos7 == 'O') {
-                oPositions.add(pos7);
-            } else if (pos7 == '_') {
-                emptyPositions.add(pos7);
-            }
-
-            if (pos8 == 'X') {
-                xPositions.add(pos8);
-            } else if (pos8 == 'O') {
-                oPositions.add(pos8);
-            } else if (pos8 == '_') {
-                emptyPositions.add(pos8);
-            }
-
-            if (pos9 == 'X') {
-                xPositions.add(pos9);
-            } else if (pos9 == 'O') {
-                oPositions.add(pos9);
-            } else if (pos9 == '_') {
-                emptyPositions.add(pos9);
-            }
+    private static void addGridPositionsToList ( char pos1, char pos2, char pos3, char pos4, char pos5, char pos6,
+                                                 char pos7, char pos8, char pos9){
+        if (pos1 == 'X') {
+            xPositions.add(pos1);
+        } else if (pos1 == 'O') {
+            oPositions.add(pos1);
+        } else if (pos1 == '_') {
+            emptyPositions.add(pos1);
         }
 
+        if (pos2 == 'X') {
+            xPositions.add(pos2);
+        } else if (pos2 == 'O') {
+            oPositions.add(pos2);
+        } else if (pos2 == '_') {
+            emptyPositions.add(pos2);
+        }
+
+        if (pos3 == 'X') {
+            xPositions.add(pos3);
+        } else if (pos3 == 'O') {
+            oPositions.add(pos3);
+        } else if (pos3 == '_') {
+            emptyPositions.add(pos3);
+        }
+
+        if (pos4 == 'X') {
+            xPositions.add(pos4);
+        } else if (pos4 == 'O') {
+            oPositions.add(pos4);
+        } else if (pos4 == '_') {
+            emptyPositions.add(pos4);
+        }
+
+        if (pos5 == 'X') {
+            xPositions.add(pos5);
+        } else if (pos5 == 'O') {
+            oPositions.add(pos5);
+        } else if (pos5 == '_') {
+            emptyPositions.add(pos5);
+        }
+
+        if (pos6 == 'X') {
+            xPositions.add(pos6);
+        } else if (pos6 == 'O') {
+            oPositions.add(pos6);
+        } else if (pos6 == '_') {
+            emptyPositions.add(pos6);
+        }
+
+        if (pos7 == 'X') {
+            xPositions.add(pos7);
+        } else if (pos7 == 'O') {
+            oPositions.add(pos7);
+        } else if (pos7 == '_') {
+            emptyPositions.add(pos7);
+        }
+
+        if (pos8 == 'X') {
+            xPositions.add(pos8);
+        } else if (pos8 == 'O') {
+            oPositions.add(pos8);
+        } else if (pos8 == '_') {
+            emptyPositions.add(pos8);
+        }
+
+        if (pos9 == 'X') {
+            xPositions.add(pos9);
+        } else if (pos9 == 'O') {
+            oPositions.add(pos9);
+        } else if (pos9 == '_') {
+            emptyPositions.add(pos9);
+        }
+    }
+
 }
-
-
-
-
